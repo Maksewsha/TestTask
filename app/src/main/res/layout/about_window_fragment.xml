@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/about_person_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standart_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/about_person_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/title_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/about_person_image"
+        tools:text="Person name" />
+
+    <TextView
+        android:id="@+id/about_person_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/subtitle_text"
+        app:layout_constraintEnd_toEndOf="@id/about_person_name"
+        app:layout_constraintStart_toStartOf="@id/about_person_name"
+        app:layout_constraintTop_toBottomOf="@id/about_person_name"
+        tools:text="Hesenebere" />
+
+    <TextView
+        android:id="@+id/about_person_birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standart_margin"
+        android:textSize="@dimen/standart_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/about_person_nickname"
+        tools:text="april 20 20" />
+
+    <TextView
+        android:id="@+id/about_person_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/standart_text"
+        app:layout_constraintStart_toStartOf="@id/about_person_birthday"
+        app:layout_constraintTop_toBottomOf="@id/about_person_birthday"
+        tools:text="Deceased" />
+
+    <TextView
+        android:id="@+id/about_person_actor"
+        android:textSize="@dimen/standart_text"
+        app:layout_constraintTop_toBottomOf="@id/about_person_status"
+        app:layout_constraintStart_toStartOf="@id/about_person_status"
+        tools:text="Actor actor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
