@@ -27,7 +27,7 @@ class CharacterViewModel(private val getCharactersListUseCase: GetCharactersList
     fun getAllCharacters() {
 
         job = CoroutineScope(Dispatchers.IO).launch {
-            val response = presentationMapper.mapFromEntity(getCharactersListUseCase.execute())
+            val response = presentationMapper.mapFromEntity(getCharactersListUseCase.execute() as CharactersDomainModel.Success)
             when (response) {
                 is CharactersUIModel.Success -> {
                     _characterList.postValue(response.data)
